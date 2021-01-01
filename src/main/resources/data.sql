@@ -1,0 +1,12 @@
+INSERT INTO colors (name, year, color, pantone_value, status) values ('cerulean', '2000', '#98B2D1', '15-4020', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('fuchsia rose','2001','#C74375','17-2031', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('true red','2002','#BF1932','19-1664', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('aqua sky','2003','#7BC4C4','14-4811', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('tigerlily','2004','#E2583E','17-1456', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('blue turquoise','2005','#53B0AE','15-5217', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('sand dollar','2006','#DECDBE','13-1106', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('chili pepper','2007','#9B1B30','19-1557', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('blue iris','2008','#5A5B9F','18-3943', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('mimosa','2009','#F0C05A','14-0848', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('turquoise','2010','#45B5AA','15-5519', 1);
+INSERT INTO colors (name, year, color, pantone_value, status) values ('honeysuckle','2011','#D94F70','18-2120', 1);
