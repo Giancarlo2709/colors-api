@@ -43,6 +43,12 @@ docker build -t colors-api .
 docker run -d --name colors-api -it -p 8080:8080 colors-api
 ```
 
+## Url AWS - Production
+[Url_Prod](http://ec2-52-23-163-178.compute-1.amazonaws.com:8080/colors)
+
+## Url Documentation Swagger - OpenApi
+[DocumentationOpenApi](http://ec2-52-23-163-178.compute-1.amazonaws.com:8080/swagger-ui.html)
+
 ## Endpoints
 To return json or xml send the following headers in each enpoint
 ```
@@ -51,7 +57,9 @@ Accept: application/xml or Accept:application/json
 
 Url Base
 ```
-http://localhost:8080
+http://localhost:8080 
+or
+http://ec2-52-23-163-178.compute-1.amazonaws.com:8080
 ```
 
 FindAll Colors:
