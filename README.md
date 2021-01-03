@@ -17,6 +17,7 @@ Api para crear, actualizar, eliminar y listar colores
 - Spring Data JPA
 - DataBase Embedded H2
 - Junit 5, Mockito
+- CircleCI
 ```
 
 ## Installation
