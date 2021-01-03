@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,9 +27,28 @@ import lombok.Setter;
 @Builder
 public class ExceptionResponse {
 
+	@Schema(type = "date",
+					name = "timestamp",
+					description = "Date of Error",
+					example = "2021-01-03T13:41:13.637+00:00"
+	)
 	private Date timestamp;
+
+	@Schema(type = "String",
+					name = "message",
+					description = "Message of Error",
+					example = "Error in business logic"
+	)
 	private String message;
+
+	@Schema(type = "String",
+					name = "details",
+					description = "Details of uri",
+					example = "uri=/colors"
+	)
 	private String details;
+
+	@ArraySchema(schema = @Schema(implementation = ErrorResponse.class))
 	private List<ErrorResponse> errors;
 
 	/**
