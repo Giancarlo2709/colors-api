@@ -2,6 +2,9 @@ Api de colores
 ===================
 Api para crear, actualizar, eliminar y listar colores
 
+##CircleCi
+[![CircleCI](https://circleci.com/gh/Giancarlo2709/colors-api/tree/master.svg?style=svg)](https://circleci.com/gh/Giancarlo2709/colors-api/tree/master)
+
 * * * * *
 ## Technology used
 ```
