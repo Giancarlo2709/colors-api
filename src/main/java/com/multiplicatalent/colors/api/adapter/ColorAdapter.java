@@ -1,6 +1,7 @@
 package com.multiplicatalent.colors.api.adapter;
 
 import com.multiplicatalent.colors.api.models.api.request.ColorSaveRequest;
+import com.multiplicatalent.colors.api.models.api.response.ColorGetIdResponse;
 import com.multiplicatalent.colors.api.models.api.response.ColorGetResponse;
 import com.multiplicatalent.colors.api.models.api.response.ColorSaveResponse;
 import com.multiplicatalent.colors.api.models.entity.Color;
@@ -22,6 +23,16 @@ public class ColorAdapter {
 				.id(color.getId())
 				.name(color.getName())
 				.color(color.getColor())
+				.build();
+	}
+
+	public static ColorGetIdResponse convertColorToColorGetIdResponse(Color color) {
+		return ColorGetIdResponse.builder()
+				.id(color.getId())
+				.name(color.getName())
+				.color(color.getColor())
+				.year(color.getYear())
+				.pantoneValue(color.getPantoneValue())
 				.build();
 	}
 	

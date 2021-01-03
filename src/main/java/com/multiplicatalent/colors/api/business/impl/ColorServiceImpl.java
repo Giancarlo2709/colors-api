@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+import com.multiplicatalent.colors.api.models.api.response.ColorGetIdResponse;
+import com.multiplicatalent.colors.api.models.api.response.PageResponse;
+import com.multiplicatalent.colors.api.util.PageUtil;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -83,17 +86,17 @@ public class ColorServiceImpl implements ColorService {
 	}
 
 	@Override
-	public Page<ColorGetResponse> findAllPageable(Pageable pageable) {
+	public PageResponse findAllPageable(Pageable pageable) {
 		Page<Color> pageColors = this.colorRepository.findByStatus(StatusType.ACTIVE.getCode(), pageable);
-		return pageColors.map(ColorAdapter::convertColorToColorGetResponse);
+		return PageUtil.pageToPageResponse(pageColors.map(ColorAdapter::convertColorToColorGetResponse));
 	}
 
 	@Override
-	public ColorGetResponse findById(Long id) throws BusinessException {
+	public ColorGetIdResponse findById(Long id) throws BusinessException {
 		Color color = this.colorRepository.findByIdAndStatus(id, StatusType.ACTIVE.getCode()).orElseThrow(
 				() -> new BusinessException(String.format(MESSAGE_COLOR_NOT_FOUND, id), INTERNAL_SERVER_ERROR));
 
-		return ColorAdapter.convertColorToColorGetResponse(color);
+		return ColorAdapter.convertColorToColorGetIdResponse(color);
 	}
 
 	@Override

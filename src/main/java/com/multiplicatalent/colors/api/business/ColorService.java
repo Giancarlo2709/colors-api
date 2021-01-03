@@ -2,11 +2,12 @@ package com.multiplicatalent.colors.api.business;
 
 import com.multiplicatalent.colors.api.exceptions.BusinessException;
 import com.multiplicatalent.colors.api.models.api.request.ColorSaveRequest;
+import com.multiplicatalent.colors.api.models.api.response.ColorGetIdResponse;
 import com.multiplicatalent.colors.api.models.api.response.ColorGetResponse;
 import com.multiplicatalent.colors.api.models.api.response.ColorSaveResponse;
 import com.multiplicatalent.colors.api.models.api.response.DeleteResponse;
 
-import org.springframework.data.domain.Page;
+import com.multiplicatalent.colors.api.models.api.response.PageResponse;
 import org.springframework.data.domain.Pageable;
 
 /**
@@ -20,10 +21,10 @@ public interface ColorService {
 	
 	ColorSaveResponse updateColor(Long id, ColorSaveRequest colorSaveRequest) 
 			throws BusinessException;
-	
-	Page<ColorGetResponse> findAllPageable(Pageable pageable);
-	
-	ColorGetResponse findById(Long id) throws BusinessException;
+
+	PageResponse findAllPageable(Pageable pageable);
+
+	ColorGetIdResponse findById(Long id) throws BusinessException;
 	
 	DeleteResponse deleteColor(Long id) throws BusinessException;
 }
