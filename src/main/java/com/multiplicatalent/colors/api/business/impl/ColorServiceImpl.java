@@ -81,7 +81,7 @@ public class ColorServiceImpl implements ColorService {
 
 			errors.add(ErrorResponse.builder().code("name").message("El nombre del color ya existe").build());
 
-			throw new BusinessException("Error en la logica de negocio", INTERNAL_SERVER_ERROR, errors);
+			throw new BusinessException("Error in business logic", INTERNAL_SERVER_ERROR, errors);
 		}
 	}
 
