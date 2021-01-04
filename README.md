@@ -18,6 +18,7 @@ Api para crear, actualizar, eliminar y listar colores
 - DataBase Embedded H2
 - Junit 5, Mockito
 - CircleCI
+- Docker
 ```
 
 ## Installation
